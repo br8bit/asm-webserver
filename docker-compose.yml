@@ -1,0 +1,14 @@
+services:
+  asm-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asm-webserver
+    ports:
+      - "8080:8080"
+    networks:
+      - asm-network
+
+networks:
+  asm-network:
+    driver: bridge
